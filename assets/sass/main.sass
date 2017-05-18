@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway')
+
+
+$main_color: #636363
+$main_font: 'Raleway', sans-serif
+$nav_color: #B825EE
+$border_color: #DDDDDD
+
+
+
+body
+	background-image: linear-gradient(to bottom, #5f4d93 15%, #e37682 85%)
+	background-repeat: no-repeat
+	color: $main_color
+	font-family: $main_font  
+
+	
+	
+// header
+.logo
+	margin: 10px auto 0
+	padding: 10px 
+	display: block
+	text-align: center
+
+header
+	text-align: center 
+	margin-bottom: 100px 
+	color: #FFF
+	h1
+		font-size: 56px
+		font-weight: bold 
+		text-transform: uppercase
+		
+	p
+		font-style: oblique 
+		margin-top: 2em
+
+
+// nav
+.menu-wrapper
+	min-height: 82px
+.container-menu.fixed
+	position: fixed
+	top: 0
+	opacity: 0.9 
+	border-radius: 0
+	width: 80%
+	left: 10%
+.container-menu
+	height: 82px
+	box-sizing: border-box
+	position: static
+	background-color: #EEEDF4
+	border-radius: 20px 20px 0 0 
+	padding: 25px
+	margin: 0 auto
+	ul
+		display: flex
+		flex-direction: row
+		justify-content: center
+	li
+		position: relative
+		margin-right: 2px 
+		&:hover
+			.menudown
+				opacity: 1
+				top: 100%
+				color: #FFF 
+				background-color: $nav_color
+				transition: all 0.5s linear
+				// display: block
+							
+		.menudown
+			position: absolute
+			top: 200%
+			flex-direction: column
+			min-width: 100%
+			opacity: 0
+			border-radius: 10px
+			transition: all 0.5s linear
+			// display: none
+			overflow-y:hidden
+			a
+				font-style: italic 
+				font-size: 16px
+				&:hover
+					background: none
+					text-decoration: underline
+					
+		.menudown:hover + a
+			background-color: $nav_color
+			color: #ffffff
+					
+	a
+		text-decoration: none
+		line-height: 1.6 
+		color: inherit
+		font-size: 20px
+		padding: 5px 15px
+		border-radius: 10px
+		transition: all 0.5s
+		&:hover
+			color: #FFF 
+			background-color: $nav_color
+			
+// MAIN
+
+//article
+
+.main
+	width: 80%
+	border-radius: 20px 
+	background-color: #FFF
+	margin: 0 auto 100px
+		
+
+.flex-container
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-between
+	
+
+h3
+	font-size: 20px
+	margin: 0.7em 0 0.7em 0
+	line-height: 1.5
+.section
+	padding: 50px
+h2
+	font-size: 2em 
+	font-weight: bold
+	margin: 0 0 0.7em 0
+h2:after
+	content: ""
+	display: block
+	margin: 0.7em 0.1em 0
+	height: 2px
+	width: 130px
+	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0)   
+
+.article_text
+	width: 60%
+	p
+		line-height: 2
+		margin: 0 0 0.7em 0  
+	.anchor
+		margin-top: 20px 
+		
+.btn
+	padding: 10px 20px
+	border: 1px solid $border_color
+	border-radius: 10px
+	background-color: #fff 
+	font-size: 16px  
+	transition: 1s
+	margin: 2.5em 0.1em 0.3em
+	cursor: pointer
+	color: #000
+	text-decoration: none 
+	&:hover
+		background-color: #EEEDF4 
+	&:focus
+		outline: none
+		 
+.image 
+	border-radius: 50%
+	padding: 0.7em 
+	border: 1px solid $border_color
+	display: inline-block
+	img 
+		border-radius: 50%
+		width: 260px
+		height: 260px
+//features
+
+.center
+	text-align: center
+	margin-top: 40px 
+	h2
+		&:after
+			margin: 0.7em auto 0
+			
+.features_item
+	width: 30%
+	text-align: center 
+	p
+		line-height: 1.2    
+	.fa
+		border: 1px solid #EEEDF4
+		padding: 45px
+		border-radius: 100%
+		font-size: 70px 
+		
+.fa-handshake-o
+	color: #efa8b0
+	
+.fa-university
+	color: #a89cc8
+	
+.fa-diamond	
+	color: #54A2E5
+	
+
+
+//statistic
+.statistic_container
+	display: flex
+	flex-direction: row
+	justify-content: center
+	margin: 2em 0
+	width: 100% 
+	& :first-child
+		border-radius: 10px 0 0 10px
+	& :last-child
+		border-radius: 0 10px 10px 0 
+	
+.statistic_item
+	text-align: center
+	color: #fff
+	padding: 1.5em 
+	display: flex
+	flex-direction: column
+	width: 100% 
+	.icon, strong
+		font-size: 2em
+		margin: 0 0 0.4em
+		
+.item1
+	background-color: #efa8b0
+	
+.item2
+	background-color: #c79cc8
+	
+.item3 
+	background-color: #a89cc8
+	
+.item4 
+	background-color: #9bb2e1
+	
+.item5
+	background-color: #8cc9f0
+	
+.statistic_descrition	
+	columns: 2
+	column-gap: 30px
+	text-align: justify
+	line-height: 2 
+.anchor
+	margin-bottom: 40px 
+	margin-top: 40px 	
+//last section
+.btn_start 
+	background-color: #8cc9f0 
+	
+
+//footer
+footer
+	margin: 150px 120px 100px
+	color: #fff
+	h2
+		font-size: 1.5em
+		&:after
+			content: none
+	p
+		line-height: 2.0 
+	.author
+		text-align: center
+		margin: 4em 0 3.5em 0
+	.flex-container
+		justify-content: space-around
+		.btn_end
+			background-color: transparent 
+			margin-bottom: 2em
+			color: #fff
+		.left_footer_side
+			width: 45% 
+		.right_footer_side
+			width: 45%
+			.social_contacts > li
+				display: inline-block 
+				margin-top: 30px
+			.social_icon
+				font-size: 1.25em
+				text-decoration: none
+				margin-right: 7px 
+				color: #fff
+				&:before
+					display: block
+					width: 2em
+					height: 2em
+					text-align: center
+					line-height: 2em
+					border-radius: 50%
+					border: 1px solid #fff
+.contact_info
+	margin: 0 0 20px 0
+	dt
+		display: block
+		float: left
+		clear: both
+		font-weight: bold 
+	dd
+		margin: 0 0 1.2em 5.5em
+		line-height: 1.5 
+
+// another page description
+.top
+	margin-top: 50px 
+.description
+	width: 80%
+	border-radius: 20px 
+	background-color: #FFF
+	margin: 50px auto 100px
+	padding: 0 
+	.picture
+		border-radius: 20px 20px 0 0 
+		width: 100%
+		height: auto
+	.desc
+		padding: 75px 
+		p
+			line-height: 2
+			margin-bottom: 20px  
+			text-align: justify 
+	
+
+
+@media (min-width: 992px) and (max-width: 1199px)
+
+
+@media (min-width: 768px) and (max-width: 991px)
+	.anchor
+		margin-top: 20px 
+	.section
+		padding: 10px
+	.flex-reverse
+		flex-direction: column-reverse
+		text-align: center
+	.flex-container
+		justify-content: center
+		h2:after
+			margin: 0.7em auto 0
+	.article_text
+		width: 100%
+		text-align: center
+	.features_item
+		width: 100%
+		margin-bottom: 2em
+	footer
+		.flex-container
+			justify-content: flex-start	
+			.left_footer_side
+				width: 100% 
+			.right_footer_side
+				width: 100%
+				
+	.description
+		margin: 50px auto 70px
+		.desc
+			padding: 50px 
+			p
+				line-height: 1.5
+				
+		
+
+
+
+@media (max-width: 767px)
+	header
+		p
+			margin-bottom: 1.5em
+	.flex-reverse
+		flex-direction: column-reverse
+		text-align: center
+	.flex-container
+		justify-content: center
+	 
+	.section
+		padding: 10px
+		h2:after
+			margin: 0.7em auto 0
+	.main
+		border-radius: 20px 20px 20px 20px
+		margin: 0 auto 50px 
+	.container-menu
+		visibility: hidden
+		display: none
+
+	.article_text
+		width: 100%
+		text-align: center
+	p
+		font-size: 14px 
+	.image img 
+		width: 200px
+		height: 200px
+	.features
+		padding: 5px  
+	.features_item
+		width: 100%
+		margin-bottom: 2em
+	.statistic_container
+		flex-wrap: wrap
+		& :first-child
+			border-radius: 10px 10px 0 0 
+		& :last-child
+			border-radius: 0 0 10px 10px 
+	.statistic_descrition
+		columns: 1	
+	footer
+		margin: 0 50px 50px
+		.flex-container
+			justify-content: flex-start	
+			.left_footer_side
+				width: 100% 
+			.right_footer_side
+				width: 100%
+			.btn_end
+				width: 100%
+	.description
+		margin: 50px auto 50px
+		width: 90% 
+		.desc
+			padding: 20px 
+			p
+				line-height: 1.5 
+				
+
+@media (max-width: 415px)
+	.main
+		margin: 0 auto 50px 
+	.flex-container
+		padding: 0px 
+	.article_text
+		width: 100%
+	p
+		font-size: 14px 
+	.image img 
+		width: 170px
+		height: 170px
+	.features_item
+		width: 100%
+		margin-bottom: 2em
+	.features
+		padding: 5px  
+	.fa
+		font-size: 40px 
+	footer
+		margin: 0 20px 20px
